@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bottom Navigation Bar',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -42,15 +41,11 @@ class _MyHomePageState extends State<MyHomePage> {
         controller: pageController,
         children: const <Widget>[
           Page1(),
-          Center(
-            child: Search(),
-          ),
-          Center(
-            child: Favourite(),
-          ),
-          Center(
-            child: Profile(),
-          ),
+          Center(child: Portfolio()),
+          Center(child: Dashboard()),
+          Center(child: Price()),
+          Center(child: Settings())
+        
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -153,39 +148,39 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class Portfolio extends StatelessWidget {
+  const Portfolio({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Home');
+    return const Text('Portfolio');
   }
 }
 
-class Search extends StatelessWidget {
-  const Search({Key? key}) : super(key: key);
+class Dashboard extends StatelessWidget {
+  const Dashboard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Search');
+    return const Text('Dashboard');
   }
 }
 
-class Favourite extends StatelessWidget {
-  const Favourite({Key? key}) : super(key: key);
+class Price extends StatelessWidget {
+  const Price({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Favourites');
+    return const Text('Price');
   }
 }
 
-class Profile extends StatelessWidget {
-  const Profile({Key? key}) : super(key: key);
+class Settings extends StatelessWidget {
+  const Settings({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Profile');
+    return const Text('Settings');
   }
 }
 
